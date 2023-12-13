@@ -1,0 +1,9 @@
+th,
+td {
+  text-align: center;
+}
+
+.banner-image {
+  height: 60px;
+  border-radius: 5px;
+}
