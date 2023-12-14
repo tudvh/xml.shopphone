@@ -170,5 +170,22 @@
             }
         }
     }
+
+    const resetPassword = async (id) => {
+        Swal.fire({
+            title: "Bạn chắc chắn chứ?",
+            text: `Bạn có thực sự muốn đặt lại mật khẩu cho tài khoản này không!`,
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya sure, chắc chắn rồi!",
+            cancelButtonText: "Không bé ơi!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.href = `${rootURL}/admin/employees/${id}/reset-password`
+            }
+        });
+    }
 </script>
 @stop
